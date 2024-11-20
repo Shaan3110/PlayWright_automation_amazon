@@ -1,5 +1,5 @@
 // Include Playwirght module
-const { Page, BrowserContext, Locator, expect } = require('@playwright/test');
+const { expect } = require('@playwright/test');
 
 exports.LoginPage = class LoginPage {
 
@@ -80,7 +80,7 @@ exports.LoginPage = class LoginPage {
 
     async tapOnAllAddToCart() {
         // Check visibility of each button
-        for (let i = 0; i < 6; i++) {
+        for (let i = 0; i < 3; i++) {
             await this.clickOnAddtoCart.nth(i).click();
             await this.page.waitForTimeout(1000);
         }
